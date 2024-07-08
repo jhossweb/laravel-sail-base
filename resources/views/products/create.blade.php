@@ -6,15 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    
 
-    <form action="{{ route('example.store') }}" method="post">
+    <form action="{{ route('product.store') }}" method="post">
         @csrf
-
-        <input type="text" name="name" >
+        <input type="text" name="name">
         <input type="submit" value="save">
     </form>
-
 
 </body>
 </html>

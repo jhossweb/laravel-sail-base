@@ -1,12 +1,11 @@
 <?php
 
-use App\Models\Example;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get("/example/create", [Example::class, "create"]);
-//Route::post("/example", [Example::class, "store"])->name("example.store");
+Route::get("/product", [ProductController::class, "create"])->name("product.create");
+Route::post("/product", [ProductController::class, "store"])->name("product.store");
