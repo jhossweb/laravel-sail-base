@@ -12,9 +12,19 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                    @can("dashboard")
+                        <x-nav-link href="{{ route('dashboard') }}" wire:navigate.hover :active="request()->routeIs('dashboard')">
+                            {{ __('Clientes') }}
+                        </x-nav-link>
+                    @endcan
+
+                    @can("employee")
+                        <x-nav-link href="{{ route('employee') }}" wire:navigate.hover :active="request()->routeIs('employee')">
+                            {{ __('Empleados') }}
+                        </x-nav-link>
+                    @endcan
+
+                   
                 </div>
             </div>
 
