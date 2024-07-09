@@ -24,4 +24,4 @@ Route::middleware([
     Route::get("/guias/{customer}", Guia::class)->middleware("can:guias.show")->name("guias.show");
     Route::get("/employees", Employee::class)->middleware("can:employee")->name("employee");
     Route::get("/employees/{employee}", ListEmployeWithCustomer::class)->middleware("can:employee.show")->name("employee.show");
-});
+})->middleware(\App\Http\Middleware\ForceHttps::class);

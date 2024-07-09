@@ -49,4 +49,4 @@ ENV DB_CONNECTION=sqlite
 RUN php artisan migrate
 CMD php artisan serve --host=0.0.0.0 --port=80
 
-EXPOSE 80
+EXPOSE 8000
