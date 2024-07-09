@@ -40,6 +40,11 @@ RUN composer install
 COPY .env.example .env
 RUN mkdir -p /app/storage/logs
 
+ENV APP_DEBUG=false
+ENV APP_KEY=base64:WSrr+SLrQB3xUmWnNHaeug02LVNX+V5FtN9na9nN8vQ=
+ENV APP_URL=https://laravel-sail-base.onrender.com
+ENV DB_CONNECTION=sqlite
+
 # Comando para iniciar el servidor web y aplicar migraciones
 RUN php artisan migrate
 CMD php artisan serve --host=0.0.0.0 --port=80
