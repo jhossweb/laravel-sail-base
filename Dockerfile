@@ -48,6 +48,6 @@ ENV DB_CONNECTION=sqlite
 
 # Comando para iniciar el servidor web y aplicar migraciones
 RUN php artisan migrate
-CMD php artisan serve --host=0.0.0.0 --port=80
+CMD php artisan serve --host=0.0.0.0 --port=8000
 
-EXPOSE 80
+EXPOSE 8000

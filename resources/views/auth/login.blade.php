@@ -11,8 +11,12 @@
                 {{ $value }}
             </div>
         @endsession
-        {{ env('APP_URL') }}
-        {{ env('ASSET_URL') }}
+        <p>
+            APP_URL = {{ env('APP_URL') }}
+        </p>
+        <p>
+            ASSET_URL = {{ env('ASSET_URL') }}
+        </p>
         {{ env('DB_DATABASE') }}
         <form method="POST" action="{{ route('login') }}">
             @csrf
