@@ -12,6 +12,7 @@
             </div>
         @endsession
         {{ env('APP_URL') }}
+        {{ env('ASSET_URL') }}
         {{ env('DB_DATABASE') }}
         <form method="POST" action="{{ route('login') }}">
             @csrf
